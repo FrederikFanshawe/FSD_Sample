@@ -1,11 +1,12 @@
 import logo from './logo.svg';
+import Chicken from '.Chicken.jpg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={Chicken} className="App-logo" alt="logo" />
         <p>
           Frederik Sommer Brondum.
         </p>
