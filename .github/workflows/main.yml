@@ -13,10 +13,10 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Build Frontend Docker image
-        run: docker build -t FSD_Sample -f Dockerfile .
+        run: docker build -t fsd_sample -f Dockerfile .
 
       - name: Push Frontend Docker image to Docker Hub
         run: |
           echo ${{ secrets.DOCKER_PASSWORD }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
-          docker tag FSD_Sample ${{ secrets.DOCKER_USERNAME }}/FSD_Sample
-          docker push ${{ secrets.DOCKER_USERNAME }}/FSD_Sample
+          docker tag fsd_sample ${{ secrets.DOCKER_USERNAME }}/fsd_sample
+          docker push ${{ secrets.DOCKER_USERNAME }}/fsd_sample
